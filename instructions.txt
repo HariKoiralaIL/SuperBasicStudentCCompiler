@@ -1,0 +1,27 @@
+Pre-Req:
+- gcc
+- LLVM
+
+Build:
+[Windows]
+- Open mingw64 shell, go to project dir
+- make clean
+- make
+
+[Linux]
+- Open terminal, go to project dir
+- make clean
+- make
+
+Testing sample file:
+[Windows]
+- ./minic.exe test.c -o test.o --emit-llvm test.ll
+- gcc test.o -o test.exe
+- ./test.exe
+- echo $?
+
+[Linux]
+- ./minic test.c -o test.o --emit-llvm test.ll
+- gcc test.o -o test
+- ./test
+- echo $?
